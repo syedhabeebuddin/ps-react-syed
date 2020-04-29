@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import Docs from "./docs/Docs";
 import * as serviceWorker from "./serviceWorker";
+import "highlight.js/styles/ocean.css";
 
 ReactDOM.render(
   <React.StrictMode>

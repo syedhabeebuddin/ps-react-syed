@@ -1,0 +1,11 @@
+.textinputbem {
+  margin-bottom: 16px;
+}
+
+.textinputbem__error {
+  color: red;
+}
+
+.textinputbem__input--state-error {
+  border: solid 1px red;
+}

@@ -48,6 +48,7 @@ function getComponentData(paths, componentName) {
     path.join(paths.components, componentName, componentName + ".js")
   );
   var info = parse(content);
+  console.log(content);
   return {
     name: componentName,
     description: info.description,

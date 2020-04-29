@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import CodeExample from "./CodeExample";
 
 class Example extends React.Component {
   constructor(props) {
@@ -17,22 +18,19 @@ class Example extends React.Component {
   render() {
     const { showCode } = this.state;
     const { code, description, name } = this.props.example;
-    const ExampleComponent = require(`./examples/${this.props.componnetName}/${name}`)
+    const ExampleComponent = require(`./examples/${this.props.componentName}/${name}`)
       .default;
     return (
       <div className="example">
-        {description && <h4>description</h4>}
-
+        <h4>{description}</h4>
         <ExampleComponent />
-
+        <br />
         <p>
-          // eslint-disable-next-line jsx-a11y/anchor-is-valid
           <a href="#" onClick={this.toggleCode}>
             {showCode ? "Hide" : "Show"} Code
           </a>
         </p>
-
-        {showCode && code}
+        {showCode && <CodeExample>{code}</CodeExample>}
       </div>
     );
   }
